@@ -3,10 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
 </head>
 <body>
-    <script src="script.js"></script>
+    <header>
+        <h1 class="text-3xl font-bold">To-do List</h1>
+    </header>
+    <main>
+        <div>
+            <form id="todo-form">
+                <input type="text" id="todo-input" placeholder="Add a new task..." required>
+                <input type="date" id="todo-date" title="Select due date" required>
+                <button type="button" onclick="addTodo()" class="bg-gray-300 hover:bg-gray-400 text-sm p-2 rounded">Add To-do</button>
+            </form>
+        </div>
+        <div class="flex justify-between my-4 text-sm">
+            <button class="bg-blue-400 hover:bg-blue-600 text-white p-1 rounded" onclick="filterTodos()">Filter</button>
+            <button class="bg-red-400 hover:bg-red-600 text-white p-1 rounded" onclick="deleteAllTodos()">Delete All</button>
+        </div>
+        <div class="text-sm">
+            <ul id="todo-list" class="list-inside">
+                <li class="bg-gray-200 rounded p-2 mb-2">
+                    <p class="text-center">No task found</p>
+                </li>
+            </ul>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Irfan Rinaldy</p>
+    </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>

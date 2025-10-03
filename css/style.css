@@ -1,0 +1,44 @@
+body {
+    justify-items: center;
+    height: 100vh;
+    align-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #f8c291;
+}
+
+header, footer {
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+div {
+    background-color: white;
+    width: 30rem;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"] {
+    width: 40%;
+    padding: 10px;
+    margin-right: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="date"] {
+    width: 35%;
+    padding: 10px;
+    margin-right: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
