@@ -17,14 +17,13 @@ function displayTodos() {
     todoList.innerHTML = '';
     
     todos.forEach((todo, index) => {
-        let listItem = document.createElement('li');
-        listItem.className = 'bg-gray-200 rounded p-2 mb-2';
-        listItem.innerHTML = `
-            <p><strong>Task:</strong> ${todo.task}</p>
-            <p><strong>Due Date:</strong> ${todo.date}</p>
-            <button onclick="deleteTodo(${index})" class="bg-red-400 hover:bg-red-600 text-white p-1 rounded">Delete</button>
+        todoList.innerHTML += `
+            <li class="bg-gray-200 rounded p-2 mb-2">
+                <p><strong>Task:</strong> ${todo.task}</p>
+                p><strong>Due Date:</strong> ${todo.date}</p>
+                <button onclick="deleteTodo(${index})" class="bg-red-400 hover:bg-red-600 text-white p-1 rounded">Delete</button>
+            </li>
         `;
-        todoList.appendChild(listItem);
     });
 }
 
